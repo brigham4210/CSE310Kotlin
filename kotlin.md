@@ -6,7 +6,7 @@ This program is to set goals for those poeple who do not have their ideal weight
 
 {Provide a link to your YouTube demonstration.  It should be a 4-5 minute demo of the software running and a walkthrough of the code.  Focus should be on sharing what you learned about the language syntax.}
 
-[Software Demo Video](http://youtube.link.goes.here)
+[Kotlin Demo Video](https://youtu.be/QmiazKJxnP0)
 
 # Development Environment
 

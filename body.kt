@@ -2,11 +2,14 @@ fun main(){
     val c = Person("Chris",172f,50f)
     c.everything()  
     
-    val b = Person("Bri",175f,150f)
+    val b = Person("Bri",175f,65f)
     b.everything()  
     
-    val d = Person("David",188f,100f)
-    d.everything() 
+    val h = Person("Howard",174f,80f)
+    h.everything() 
+
+    val l = Person("Lucky",180f,120f)
+    l.everything()
 }
 
 class Person(name: String, height: Float, weight: Float) {
@@ -55,6 +58,7 @@ class Person(name: String, height: Float, weight: Float) {
             var gain = iw - weight
             println("You need to be over $iw KG")
             println("You need to gain at least $gain KG") 
+            
             iw = 22*(height/100)*(height/100) 
             gain = iw - weight
             val add = gain/12
@@ -62,8 +66,11 @@ class Person(name: String, height: Float, weight: Float) {
             println("Here are the goals for each month for you:")
             for (i in 1..12){
                 val w = weight + add*i
-                println("Your goal for $i month is $w .")
+                println("Your goal for $i month is $w KG.")
             }
+        } else if (bmi <26){
+            // This is for healthy people 
+            println("Keep it up!")
         } else if (bmi <34){
             // for BMI between 26 and 34
             //// weight when BMI=26
@@ -71,6 +78,7 @@ class Person(name: String, height: Float, weight: Float) {
             var lose = weight - iw
             println("You need to be less than $iw KG")
             println("You need to lose at least $lose KG")
+            
             iw = 22*(height/100)*(height/100)
             lose = weight - iw
             val minus = lose/12
@@ -78,7 +86,7 @@ class Person(name: String, height: Float, weight: Float) {
             println("Here are the goals for each month for you:")
             for (i in 1..12){
                 val w = weight - minus*i
-                println("Your goal for $i month is $w .")
+                println("Your goal for $i month is $w KG.")
             } 
         } else if (bmi >34){
             //// This part is for much Overweight people whose BMI >34
@@ -86,6 +94,7 @@ class Person(name: String, height: Float, weight: Float) {
             var lose = weight - iw
             println("You need to be less than $iw KG")
             println("You need to lose at least $lose KG")
+            
             iw = 22*(height/100)*(height/100)
             lose = weight - iw
             val minus = lose/18
@@ -93,9 +102,9 @@ class Person(name: String, height: Float, weight: Float) {
             println("Here are the goals for each month for you:")
             for (i in 1..18){
                 val w = weight - minus*i
-                println("Your goal for $i month is $w .")
+                println("Your goal for $i month is $w KG.")
             } 
-        } else{ println("Keep it up!")}}
+        } }
 
     fun everything(){
         // run all of the functions in this class
